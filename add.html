@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+</head>
+<body>
+
+<div></div>
+<script>
+    $.ajaxSetup({
+        url: "http://localhost/RESTFul/index.php/Home/God/rest/one/5/two/3",
+
+        type: "post",
+
+    });
+
+
+    $.ajax(
+            {
+                success: function ($R) {
+                    alert($R);
+                    $("div").text($R);
+
+                }
+            }
+            ,
+
+            {
+                error: function ($error) {
+                    alert($error);
+                }
+            }
+    );
+</script>
+
+</body>
+</html>
